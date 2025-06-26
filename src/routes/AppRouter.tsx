@@ -1,12 +1,14 @@
+// src/routes/AppRouter.tsx
 import { BrowserRouter, Routes, Route } from 'react-router'
+import Home from '../pages/Home'
+import Predict from "../pages/Predict.tsx";
 
 export default function AppRouter() {
     return (
         <BrowserRouter>
             <Routes>
-                {/* Agregaremos rutas reales más adelante */}
-                <Route path="/" element={<div>Página de inicio</div>} />
-                <Route path="/predict" element={<div>Página de predicción</div>} />
+                <Route path="/" element={<Home />} />
+                <Route path="/predict" element={<Predict/> } />
             </Routes>
         </BrowserRouter>
     )
