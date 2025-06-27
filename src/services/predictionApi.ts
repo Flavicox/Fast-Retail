@@ -7,7 +7,7 @@ interface PredictRequest {
     ShippingCost: number;
     Category: string;
     PaymentMethod: string;
-    SalesChanel: string;
+    SalesChannel: string;
     InvoiceDate: string;
 }
 

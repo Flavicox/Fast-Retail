@@ -38,7 +38,7 @@ export default function PredictionForm({ onPredict }: Props) {
                 ShippingCost: data.shippingCost,
                 Category: data.category,
                 PaymentMethod: data.paymentMethod,
-                SalesChanel: data.salesChannel,
+                SalesChannel: data.salesChannel,
                 InvoiceDate: data.invoiceDate,
             }).unwrap()
 
