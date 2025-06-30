@@ -9,7 +9,7 @@ interface Props {
     onClear: () => void
 }
 
-export default function PredictionTable({ data }: Props) {
+export default function PredictionTable({ data, onClear }: Props) {
     const exportToPDF = () => {
         if (data.length === 0) {
             toast.error('No hay datos para exportar')
