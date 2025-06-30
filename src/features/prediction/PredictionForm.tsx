@@ -101,7 +101,6 @@ export default function PredictionForm({ onPredict }: Props) {
                 <div>
                     <label className="block font-medium">Categoría</label>
                     <select {...register('category')} className="input">
-                        <option value="Desconocido">Desconocido</option>
                         <option value="Electronics">Electrónica</option>
                         <option value="Accesories">Accesorios</option>
                         <option value="Apparel">Vestimenta</option>
