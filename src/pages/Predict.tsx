@@ -34,6 +34,11 @@ export default function Predict() {
         setRecords((prev) => [...prev, newRecord])
         setLatestPrediction(newRecord.predictedQuantity)
     }
+    const handleClearRecords = () => {
+        localStorage.removeItem('predictionRecords')
+        setRecords([])
+        setLatestPrediction(null)
+    }
 
     return (
         <div className="min-h-screen bg-gray-100 px-6 py-10">
@@ -47,7 +52,7 @@ export default function Predict() {
                 <PredictionResult value={latestPrediction} />
             )}
 
-            {records.length > 0 && <PredictionTable data={records} />}
+            {records.length > 0 && <PredictionTable data={records} onClear={handleClearRecords} />}
         </div>
     )
 }

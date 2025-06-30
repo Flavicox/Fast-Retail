@@ -6,6 +6,7 @@ import toast from 'react-hot-toast'
 
 interface Props {
     data: PredictionRecord[]
+    onClear: () => void
 }
 
 export default function PredictionTable({ data }: Props) {
@@ -49,14 +50,22 @@ export default function PredictionTable({ data }: Props) {
 
     return (
         <div className="max-w-6xl mx-auto">
-            <div className="flex justify-between items-center mb-4">
+            <div className="flex justify-between items-center mb-4 flex-wrap gap-2">
                 <h2 className="text-xl font-bold text-gray-800">Historial de Predicciones</h2>
-                <button
-                    onClick={exportToPDF}
-                    className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-                >
-                    Exportar a PDF
-                </button>
+                <div className="flex gap-2">
+                    <button
+                        onClick={onClear}
+                        className="bg-gray-300 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-400 transition"
+                    >
+                        Limpiar tabla
+                    </button>
+                    <button
+                        onClick={exportToPDF}
+                        className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+                    >
+                        Exportar a PDF
+                    </button>
+                </div>
             </div>
 
             <div className="overflow-x-auto rounded-lg shadow">
